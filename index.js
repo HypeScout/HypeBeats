@@ -1,4 +1,4 @@
-const Axios = require("axios");
+// const axios = require("axios");
 
 const logTypes = {
     LOG: "LOG",
@@ -15,7 +15,7 @@ function postData(logs, type) {
         return console.warn("HypeBeats initialization failure: \n\n\tnew HypeBeats() \n\n\t^logStoreURL is undefined");
     }
 
-    // Axios.post(url, { logs, type })
+    // axios.post(url, { logs, type })
     //     .then(res => console.log(res.data))
     //     .catch(err => console.error("Beats error: ", err.response || err));
 }
@@ -28,25 +28,25 @@ class HypeBeats {
 
     // log
     log(logs) {
-        console.log("%c HypeLog: ", "background: #fff; color: #374046", logs);
+        console.log("%c HypeLog: ", "background: #374046; color: #fff", logs);
         postData(logs, logTypes.LOG);
     }
     
     // info
     info(logs) {
-        console.info("%c HypeInfo: ", "background: #fff; color: #2196F3", logs);
+        console.info("%c HypeInfo: ", "background: #2196F3; color: #fff", logs);
         postData(logs, logTypes.INFO);
     }
     
     // error
     error(logs) {
-        console.error("%c HypeError: ", "background: #fff; color: #F44336", logs);
+        console.error("%c HypeError: ", "background: #F44336; color: #fff", logs);
         postData(logs, logTypes.ERROR);
     }
     
     // warn
     warn(logs) {
-        console.warn("%c HypeWarn: ", "background: #fff; color: #FF9800", logs);
+        console.warn("%c HypeWarn: ", "background: #FF9800; color: #fff", logs);
         postData(logs, logTypes.WARN);
     }
 }

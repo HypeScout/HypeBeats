@@ -1,6 +1,6 @@
 {
 	"name": "hypebeats",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Logs data collector",
 	"main": "index.js",
 	"scripts": {
